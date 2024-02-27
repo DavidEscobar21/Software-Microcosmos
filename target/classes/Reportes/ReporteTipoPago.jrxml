@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4e0693b-e311-47fc-a841-8bfba2e3121f">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Empleado" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT IdTipoDePago, NombreTipoDePago, DescripcionTipoDePago FROM tipodepago WHERE ActivoTipoDePago IS TRUE;]]>
+	</queryString>
+	<field name="IdTipoDePago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreTipoDePago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DescripcionTipoDePago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Empleado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="134" splitType="Stretch">
+			<image>
+				<reportElement x="78" y="18" width="400" height="116" uuid="1b00168b-d85b-45fd-bc32-75b63cdaae1a"/>
+				<imageExpression><![CDATA["C:\\Users\\david\\Desktop\\SoftwareMicrocosmos-IS-1\\src\\main\\resources\\imagenes\\LogoMicrocosmos.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="-2" width="52" height="20" uuid="b139ea3b-6b2f-48de-92e0-015e3c8ba4d8"/>
+				<text><![CDATA[Empleado: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="-2" width="166" height="20" uuid="122ad388-224b-4e45-b2a2-625ef6c0c22e"/>
+				<textFieldExpression><![CDATA[$P{Empleado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="165" y="0" width="232" height="35" uuid="a5d945e4-5457-4e58-b6de-8009c8ed4210"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[REPORTE TIPO DE PAGO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="161" y="0" width="19" height="20" uuid="c160eb15-882f-4da1-98b3-928e4d5a73ba"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="0" width="67" height="20" uuid="896a2094-46ab-4f3e-8415-ed8fcd57ff47"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="0" width="87" height="20" uuid="4dad111a-17f0-4ebd-88ee-b098d3c7f2fa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="161" y="1" width="19" height="20" uuid="4bc48302-1b84-4fc6-a779-1b95a93c721b"/>
+				<textFieldExpression><![CDATA[$F{IdTipoDePago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="1" width="67" height="20" uuid="ade65847-540c-4258-b3cc-e578a785e14a"/>
+				<textFieldExpression><![CDATA[$F{NombreTipoDePago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="2" width="186" height="20" uuid="e0a10550-890f-4c77-860c-652caf1de944"/>
+				<textFieldExpression><![CDATA[$F{DescripcionTipoDePago}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="397" y="0" width="116" height="20" uuid="e9d25364-64fe-4f9a-8394-83f1b7807f93"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="513" y="0" width="40" height="20" uuid="dbac2c39-9693-45d5-9fe2-a8517c49d245"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="13" y="0" width="100" height="20" uuid="1e798206-0dd4-49f1-bb2a-3d9e2b681539"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

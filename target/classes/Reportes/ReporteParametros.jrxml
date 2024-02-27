@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4e0693b-e311-47fc-a841-8bfba2e3121f">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="12"/>
+	<parameter name="Empleado" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT IdParametros, Cai, date_format(FechaEmision, "%d/%m/%Y") AS FechaEmision, date_format(FechaCaducidad, "%d/%m/%Y") AS FechaCaducidad, FacturaInicial, FacturaFinal FROM parametros where ActivoParametros IS TRUE;
+]]>
+	</queryString>
+	<field name="IdParametros" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaEmision" class="java.lang.String"/>
+	<field name="FechaCaducidad" class="java.lang.String"/>
+	<field name="FacturaInicial" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FacturaFinal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="Empleado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="134" splitType="Stretch">
+			<image>
+				<reportElement x="78" y="18" width="400" height="116" uuid="1b00168b-d85b-45fd-bc32-75b63cdaae1a"/>
+				<imageExpression><![CDATA["C:\\Users\\david\\Desktop\\SoftwareMicrocosmos-IS-1\\src\\main\\resources\\imagenes\\LogoMicrocosmos.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="-2" width="52" height="20" uuid="b139ea3b-6b2f-48de-92e0-015e3c8ba4d8"/>
+				<text><![CDATA[Empleado: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="52" y="-2" width="166" height="20" uuid="122ad388-224b-4e45-b2a2-625ef6c0c22e"/>
+				<textFieldExpression><![CDATA[$P{Empleado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="173" y="0" width="224" height="35" uuid="a5d945e4-5457-4e58-b6de-8009c8ed4210"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[REPORTE PARAMETROS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="243" y="1" width="77" height="20" uuid="b25b614c-29e0-4434-8ac4-fab56872a794"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Emisión]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="1" width="75" height="20" uuid="46e1bef8-ce24-4aeb-b8dc-3fd844e8f624"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Factura Inicial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="20" height="20" uuid="6c78db98-94b1-4fdd-bf10-234fc0ea7d11"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="1" width="68" height="20" uuid="f10a1000-caa9-441f-8337-bd0be9f9b311"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Factura Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="1" width="223" height="20" uuid="de39e085-e5f1-439d-86f8-e048650e6724"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CAI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="1" width="90" height="20" uuid="ab57488e-4c90-46c0-be46-b19b1453aa83"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Caducidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="2" width="223" height="20" uuid="ca7d9724-59ba-4938-a5db-f07e116d3fa9"/>
+				<textFieldExpression><![CDATA[$F{Cai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="243" y="2" width="55" height="20" uuid="befc7a4f-189a-474d-8391-d25c41e6b6e0"/>
+				<textFieldExpression><![CDATA[$F{FechaEmision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="2" width="53" height="20" uuid="4dffaccd-0b4f-4240-bda4-c35644d9278b"/>
+				<textFieldExpression><![CDATA[$F{FechaCaducidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="415" y="2" width="70" height="20" uuid="df22224c-8b57-4640-a03e-f1aa97d9084e"/>
+				<textFieldExpression><![CDATA[$F{FacturaInicial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="2" width="20" height="20" uuid="b70dadef-7776-4ddb-8760-fcbdd3c0e244"/>
+				<textFieldExpression><![CDATA[$F{IdParametros}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="2" width="68" height="20" uuid="4cde68ff-38b4-42db-a3eb-9b1fb90a831c"/>
+				<textFieldExpression><![CDATA[$F{FacturaFinal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="397" y="0" width="116" height="20" uuid="e9d25364-64fe-4f9a-8394-83f1b7807f93"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pág "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="513" y="0" width="40" height="20" uuid="dbac2c39-9693-45d5-9fe2-a8517c49d245"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="13" y="0" width="100" height="20" uuid="1e798206-0dd4-49f1-bb2a-3d9e2b681539"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: com.dao.AreaLaboralHistoricaJpaControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 8.502 s <<< FAILURE! - in com.dao.AreaLaboralHistoricaJpaControllerTest
+com.dao.AreaLaboralHistoricaJpaControllerTest.testFindAreaLaboralHistorica  Time elapsed: 2.584 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testFindAreaLaboralHistorica(AreaLaboralHistoricaJpaControllerTest.java:142)
+
+com.dao.AreaLaboralHistoricaJpaControllerTest.testFindAreaLaboralHistoricaEntities_0args  Time elapsed: 1.052 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testFindAreaLaboralHistoricaEntities_0args(AreaLaboralHistoricaJpaControllerTest.java:111)
+
+com.dao.AreaLaboralHistoricaJpaControllerTest.testEdit  Time elapsed: 1.027 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testEdit(AreaLaboralHistoricaJpaControllerTest.java:85)
+
+com.dao.AreaLaboralHistoricaJpaControllerTest.testGetAreaLaboralHistoricaCount  Time elapsed: 1.051 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testGetAreaLaboralHistoricaCount(AreaLaboralHistoricaJpaControllerTest.java:156)
+
+com.dao.AreaLaboralHistoricaJpaControllerTest.testDestroy  Time elapsed: 0.571 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testDestroy(AreaLaboralHistoricaJpaControllerTest.java:98)
+
+com.dao.AreaLaboralHistoricaJpaControllerTest.testCreate  Time elapsed: 1.046 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testCreate(AreaLaboralHistoricaJpaControllerTest.java:72)
+
+com.dao.AreaLaboralHistoricaJpaControllerTest.testFindAreaLaboralHistoricaEntities_int_int  Time elapsed: 0.562 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.dao.AreaLaboralHistoricaJpaControllerTest.testFindAreaLaboralHistoricaEntities_int_int(AreaLaboralHistoricaJpaControllerTest.java:127)
+

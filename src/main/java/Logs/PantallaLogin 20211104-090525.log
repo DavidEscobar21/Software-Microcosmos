@@ -1,0 +1,2 @@
+04/11/2021 09:05:25 - Error al Resetear: javax.persistence.PersistenceException: No Persistence provider for EntityManager named DB
+04/11/2021 09:05:25 - Error al Desactivar Fecha: javax.persistence.PersistenceException: No Persistence provider for EntityManager named DB
